@@ -1,0 +1,21 @@
+version: "3.7"
+volumes:
+  r2dbc-practice-db-dbdata:
+services:
+  r2dbc-practice-db:
+    image: mysql:8.0
+    restart: unless-stopped
+    container_name: my-r2dbc-practice
+    ports:
+      - "13399:3306"
+    environment:
+      - MYSQL_DATABASE=r2dbc
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=1234
+      - MYSQL_ROOT_PASSWORD=1234
+      - TZ=Asia/Seoul
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+    volumes:
+      - r2dbc-practice-db-dbdata:/var/lib/mysql9
