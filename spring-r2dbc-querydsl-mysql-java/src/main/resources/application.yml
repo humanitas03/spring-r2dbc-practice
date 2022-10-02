@@ -1,0 +1,21 @@
+spring:
+  config:
+    activate:
+      on-profile: default
+#  r2dbc:
+#    url: r2dbc:mysql://localhost:13399/r2dbc?useSSL=false&allowPublicKeyRetrieval=true
+#    username: user
+#    password: 1234
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+  sql:
+    init:
+      mode: ALWAYS
+
+logging:
+  level:
+    org.springframework.data.r2dbc: DEBUG
+    dev.miku.r2dbc.mysql.QUERY: DEBUG
