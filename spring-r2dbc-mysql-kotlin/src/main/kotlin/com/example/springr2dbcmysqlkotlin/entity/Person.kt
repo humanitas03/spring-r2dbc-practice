@@ -4,16 +4,14 @@ import org.springframework.data.annotation.Id
 import org.springframework.data.relational.core.mapping.Table
 
 @Table("person")
-class Person (
+class Person(
 
     @Id
-    var id: Long,
+    var id: Int? = null,
 
-    var name: String,
+    var name: String?,
 
-    var phoneNumber: String,
+    var phoneNumber: String?,
 
-    var teamId: Long,
-
-    2
+    var teamId: Int?,
 )

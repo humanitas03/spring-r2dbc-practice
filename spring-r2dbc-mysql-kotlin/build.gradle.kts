@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id("org.springframework.boot") version "2.7.4"
+    id("org.springframework.boot") version "2.6.4"
     id("io.spring.dependency-management") version "1.0.14.RELEASE"
     kotlin("jvm") version "1.6.21"
     kotlin("plugin.spring") version "1.6.21"
@@ -24,8 +24,9 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
 //    runtimeOnly("mysql:mysql-connector-java")
-    implementation("com.github.jasync-sql:jasync-r2dbc-mysql:2.1.1")
 
+    implementation("com.github.jasync-sql:jasync-r2dbc-mysql:2.0.8")
+//    implementation("dev.miku:r2dbc-mysql:0.8.2.RELEASE")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("io.projectreactor:reactor-test")
 }

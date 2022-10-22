@@ -6,8 +6,8 @@ import org.springframework.data.relational.core.mapping.Table
 @Table("team")
 data class Team(
 
-    @Id    
-    var id: Long,
+    @Id
+    var id: Int? = null,
 
-    var teamName: String,
+    var teamName: String?,
 )

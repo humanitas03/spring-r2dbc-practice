@@ -3,3 +3,10 @@ spring:
     url: r2dbc:mysql://localhost:13399/r2dbc?useSSL=false&allowPublicKeyRetrieval=true
     username: user
     password: 1234
+  sql:
+    init:
+      mode: always
+
+logging:
+  level:
+    root: trace
